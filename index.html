@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="6minEats" />
+    <meta name="keywords" content="6minEats, 6 minEats, delivery app" />
+    <meta name="author" content="Carolina Girafa" />
+
+    <title>6 MinEats</title>
+    <link rel="stylesheet" href="reset.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button
+      class="fundo esconder"
+      type="button"
+      enabled
+      onclick="cancelar()"
+    ></button> <!-- botao estranho -->
+    <div class="confirmacao esconder">
+      <h2>
+        Confirme seu pedido
+      </h2>
+      <div><span class="prato"></span><span class="precoprato"></span></div>
+      <div><span class="bebida"></span><span class="precobebida"></span></div>
+      <div>
+        <span class="sobremesa"></span><span class="precosobremesa"></span>
+      </div>
+      <div>
+        <span class="total">TOTAL</span><span class="precofinal"></span>
+      </div>
+      <button
+        class="enviarpedido"
+        type="button"
+        enabled
+        onclick="enviarpedido()"
+      >
+        <p>Tudo certo, pode pedir!</p>
+      </button>
+      <button class="cancelar" type="button" enabled onclick="cancelar()">
+        <p>Cancelar</p>
+      </button>
+    </div>
+    <header>
+      <div class="topo">
+        <h1>6minEats</h1>
+        <p>Your food in 6 minutes</p>
+      </div>
+    </header>
+    <main>
+      <h1>
+        Primeiro, seu prato
+      </h1>
+      <section class="itensprato">
+        <div class="itens" onclick="pratoselecionado(this)">
+          <img src="assets/comida.jpg" alt="imagem de comida" />
+          <h2>Frango Yin Yang</h2>
+          <p>Um pouco de batata, um pouco de salada</p>
+          <p>€ <span>14.99</span></p>
+          <ion-icon class="iconselecao" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="itens" onclick="pratoselecionado(this)">
+          <img src="assets/comida.jpg" alt="imagem de comida" />
+          <h2>Frango Yin+ Yang-</h2>
+          <p>Mais batata, menos salada</p>
+          <p>€ <span>13.99</span></p>
+          <ion-icon class="iconselecao" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="itens" onclick="pratoselecionado(this)">
+          <img src="assets/comida.jpg" alt="imagem de comida" />
+          <h2>Frango Yin Yin</h2>
+          <p>Um pouco de batata e mais batata</p>
+          <p>€ <span>14.99</span></p>
+          <ion-icon class="iconselecao" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="itens" onclick="pratoselecionado(this)">
+          <img src="assets/comida.jpg" alt="imagem de comida" />
+          <h2>Frango Yang e Yang</h2>
+          <p>Um pouco de salada e mais salada</p>
+          <p>€ <span>12.99</span></p>
+          <ion-icon class="iconselecao" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="itens" onclick="pratoselecionado(this)">
+          <img src="assets/comida.jpg" alt="imagem de comida" />
+          <h2>Frango Yin- Yang+</h2>
+          <p>Menos batata, mais salada</p>
+          <p>€ <span>13.99</span></p>
+          <ion-icon class="iconselecao" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="itens" onclick="pratoselecionado(this)">
+          <img src="assets/comida.jpg" alt="imagem de comida" />
+          <h2>Frango -(Yin Yang)</h2>
+          <p>Nada de batata, nada de salada</p>
+          <p>€ <span>11.99</span></p>
+          <ion-icon class="iconselecao" name="checkmark-circle"></ion-icon>
+        </div>
+      </section>
+      <h1>
+        Agora, sua bebida
+      </h1>
+      <section class="itensbebida">
+        <div class="itens" onclick="bebidaselecionada(this)">
+          <img src="assets/coca.jpg" alt="imagem de comida" />
+          <h2>Coquinha gelada</h2>
+          <p>Garrafa 1L</p>
+          <p>€ <span>3.99</span></p>
+          <ion-icon class="iconselecao" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="itens" onclick="bebidaselecionada(this)">
+          <img src="assets/coca.jpg" alt="imagem de comida" />
+          <h2>Coquinha gelada</h2>
+          <p>Garrafa 600ml</p>
+          <p>€ <span>3.99</span></p>
+          <ion-icon class="iconselecao" name="checkmark-circle"></ion-icon>
+        </div>
+
+        <div class="itens" onclick="bebidaselecionada(this)">
+          <img src="assets/coca.jpg" alt="imagem de comida" />
+          <h2>Coquinha gelada</h2>
+          <p>Garrafa 290ml</p>
+          <p>€ <span>3.99</span></p>
+          <ion-icon class="iconselecao" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="itens" onclick="bebidaselecionada(this)">
+          <img src="assets/coca.jpg" alt="imagem de comida" />
+          <h2>Coquinha gelada</h2>
+          <p>Lata 350ml</p>
+          <p>€ <span>3.99</span></p>
+          <ion-icon class="iconselecao" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="itens" onclick="bebidaselecionada(this)">
+          <img src="assets/coca.jpg" alt="imagem de comida" />
+          <h2>Coquinha gelada</h2>
+          <p>Lata 310ml</p>
+          <p>€ <span>3.99</span></p>
+          <ion-icon class="iconselecao" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="itens" onclick="bebidaselecionada(this)">
+          <img src="assets/coca.jpg" alt="imagem de comida" />
+          <h2>Coquinha gelada</h2>
+          <p>Lata 250ml</p>
+          <p>€ <span>3.99</span></p>
+          <ion-icon class="iconselecao" name="checkmark-circle"></ion-icon>
+        </div>
+      </section>
+      <h1>
+        Por fim, sua sobremesa
+      </h1>
+      <section class="itenssobremesa">
+        <div class="itens" onclick="sobremesaselecionada(this)">
+          <img src="assets/pudim.jpg" alt="imagem de comida" />
+          <h2>Pudim</h2>
+          <p>Só pudim</p>
+          <p>€ <span>4.59</span></p>
+          <ion-icon class="iconselecao" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="itens" onclick="sobremesaselecionada(this)">
+          <img src="assets/pudim.jpg" alt="imagem de comida" />
+          <h2>Pudim</h2>
+          <p>Somente pudim</p>
+          <p>€ <span>4.59</span></p>
+          <ion-icon class="iconselecao" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="itens" onclick="sobremesaselecionada(this)">
+          <img src="assets/pudim.jpg" alt="imagem de comida" />
+          <h2>Pudim</h2>
+          <p>Unicamente pudim</p>
+          <p>€ <span>4.59</span></p>
+          <ion-icon class="iconselecao" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="itens" onclick="sobremesaselecionada(this)">
+          <img src="assets/pudim.jpg" alt="imagem de comida" />
+          <h2>Pudim</h2>
+          <p>Exclusivamente pudim</p>
+          <p>€ <span>4.59</span></p>
+          <ion-icon class="iconselecao" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="itens" onclick="sobremesaselecionada(this)">
+          <img src="assets/pudim.jpg" alt="imagem de comida" />
+          <h2>Pudim</h2>
+          <p>Meramente pudim</p>
+          <p>€ <span>4.59</span></p>
+          <ion-icon class="iconselecao" name="checkmark-circle"></ion-icon>
+        </div>
+        <div class="itens" onclick="sobremesaselecionada(this)">
+          <img src="assets/pudim.jpg" alt="imagem de comida" />
+          <h2>Pudim</h2>
+          <p>Apenas pudim</p>
+          <p>€ <span>4.59</span></p>
+          <ion-icon class="iconselecao" name="checkmark-circle"></ion-icon>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <button
+        class="fecharpedido"
+        type="button"
+        disabled
+        onclick="confirmarpedido()"
+      >
+        <p>Choose at least 1 item to submit your order</p>
+      </button>
+    </footer>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
